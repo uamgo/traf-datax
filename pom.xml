@@ -45,10 +45,10 @@
         <module>transformer</module>
 
         <!-- reader -->
-
+        <module>esgyndbreader</module>
 
         <!-- writer -->
-
+        <module>esgyndbwriter</module>
         
         <!-- common support module -->
         <module>plugin-rdbms-util</module>
