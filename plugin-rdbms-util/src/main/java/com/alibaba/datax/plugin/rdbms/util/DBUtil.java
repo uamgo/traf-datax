@@ -702,6 +702,7 @@ public final class DBUtil {
         List<String> sessionConfig = null;
         switch (databaseType) {
             case Oracle:
+            case ESGYNDB:
                 sessionConfig = config.getList(Key.SESSION,
                         new ArrayList<String>(), String.class);
                 DBUtil.doDealWithSessionConfig(conn, sessionConfig, message);

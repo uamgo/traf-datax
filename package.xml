@@ -25,9 +25,22 @@
         </fileSet>
 
         <!-- reader -->
-
+        <fileSet>
+            <directory>esgyndbreader/target/datax/</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+            <outputDirectory>datax</outputDirectory>
+        </fileSet>
 
         <!-- writer -->
+        <fileSet>
+            <directory>esgyndbwriter/target/datax/</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+            <outputDirectory>datax</outputDirectory>
+        </fileSet>
 
     </fileSets>
 </assembly>
