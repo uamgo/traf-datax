@@ -1,6 +1,9 @@
 # traf-datax
 
-traf-datax 是基于DataX开发的关于esgyndb数据库的reader、writer插件，实现esgyndb与其他数据源进行互通。
+traf-datax 是基于***DataX*** 开发的关于esgyndb数据库的reader、writer插件，实现esgyndb与其他数据源进行互通。
+
+为了适配不同的版本，其中有两个分支， master分支是根据 [***alibaba DataX***](https://github.com/alibaba/DataX) 代码库开发的;
+hashdatax分支是根据[***HashDataInc DataX***](https://github.com/HashDataInc/DataX/) 代码库开发的;
 
 # System Requirements
 
