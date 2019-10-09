@@ -254,7 +254,6 @@ public class SingleTableSplitUtil {
 
         switch (SingleTableSplitUtil.DATABASE_TYPE) {
             case Oracle:
-            case ESGYNDB:
                 isValidLongType |= type == Types.NUMERIC;
                 break;
             default:
