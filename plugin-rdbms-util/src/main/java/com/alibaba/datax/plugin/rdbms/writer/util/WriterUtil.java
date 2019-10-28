@@ -111,7 +111,8 @@ public final class WriterUtil {
     public static String getWriteTemplate(List<String> columnHolders, List<String> valueHolders, String writeMode, DataBaseType dataBaseType, boolean forceUseUpdate) {
         boolean isWriteModeLegal = writeMode.trim().toLowerCase().startsWith("insert")
                 || writeMode.trim().toLowerCase().startsWith("replace")
-                || writeMode.trim().toLowerCase().startsWith("update");
+                || writeMode.trim().toLowerCase().startsWith("update")
+                || writeMode.trim().toLowerCase().startsWith("upsert");
 
         if (!isWriteModeLegal) {
             throw DataXException.asDataXException(DBUtilErrorCode.ILLEGAL_VALUE,
@@ -135,6 +136,8 @@ public final class WriterUtil {
             //这里是保护,如果其他错误的使用了update,需要更换为replace
             if (writeMode.trim().toLowerCase().startsWith("update")) {
                 writeMode = "replace";
+            } else if (writeMode.trim().toLowerCase().startsWith("upsert")) {
+                writeMode = "UPSERT USING LOAD";
             }
             writeDataSqlTemplate = new StringBuilder().append(writeMode)
                     .append(" INTO %s (").append(StringUtils.join(columnHolders, ","))

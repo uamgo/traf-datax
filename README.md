@@ -88,6 +88,7 @@ hashdatax分支是根据[***HashDataInc DataX***](https://github.com/HashDataInc
                         "writer": {
                             "name": "esgyndbwriter", 
                             "parameter": {
+                                "writeMode": "",
                                 "column": [], 
                                 "connection": [
                                     {
@@ -150,6 +151,7 @@ hashdatax分支是根据[***HashDataInc DataX***](https://github.com/HashDataInc
                        "writer": {
                             "name": "esgyndbwriter",
                             "parameter": {
+                                "writeMode": "upsert", //还支持insert
                                 "username": "admin",
                                 "password": "admin",
                                 "column": ["BB", "CC"],
