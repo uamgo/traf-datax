@@ -5,6 +5,8 @@ traf-datax 是基于***DataX*** 开发的关于esgyndb数据库的reader、write
 为了适配不同的版本，其中有两个分支， master分支是根据 [***alibaba DataX***](https://github.com/alibaba/DataX) 代码库开发的;
 hashdatax分支是根据[***HashDataInc DataX***](https://github.com/HashDataInc/DataX/) 代码库开发的;
 
+当前代码库支持的esgyndb数据库版本是***2.7.0***，切换其他版本的方法在[当前页尾](https://github.com/kevinxu021/traf-datax#faq)
+
 # System Requirements
 
 - Linux
@@ -206,3 +208,5 @@ A: 当前插件中使用的是jdbcT4-2.7.0.jar，如果想要替换其它版本�
     
     (3) 重新编译打包
     
+    除此之外，还有一个非正规方式：
+    直接用当前版本的jdbc替换掉当前打包好的esgyndbwriter中libs目录下的jdbc即可
